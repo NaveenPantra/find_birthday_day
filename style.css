@@ -1,0 +1,266 @@
+:root {
+    --color-text: #2c3e50;
+    --color-link: #3498db;
+    --color-link-bg: #3498db1f;
+    --color-red: #c0392b;
+    --color-yellow: #f39c12;
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+    --color-day-bck: #aba0ec;
+    --color-body-bck: #eaf0f2;
+    --color-list-bck: #dee4e6;
+    --border-radius-4: 4px;
+    --border-radius-5: 5px;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+    --line: 1px solid var(--color-grey-light-2);
+    --line-1: 1px  solid #d5d9db;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    color: var(--color-text);
+    background: var(--color-body-bck);
+    padding: 2rem;
+}
+
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+textarea {
+    height: 500px;
+    width: 600px;
+    /*outline: none;*/
+}
+
+input, textarea {
+    border: var(--line-1);
+    padding: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    background: transparent;
+    border-bottom-left-radius: var(--border-radius-5);
+    border-bottom-right-radius: var(--border-radius-5);
+}
+
+main {
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.heading {}
+
+.heading_3 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.heading_5 {
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.header {}
+.header h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.days_list {
+    width: 48%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.day_item {
+    margin-bottom: 2.4rem;
+}
+
+.day {
+    border: var(--line-1);
+    border-radius: var(--border-radius-5);
+    overflow: hidden;
+}
+
+.day .heading {
+    background: var(--color-day-bck);
+    color: var(--color-grey-light-1);
+    text-align: right;
+    width: 100%;
+    padding: 1rem .5rem;
+}
+
+.day_birthday_list {
+    width: 250px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    overflow: hidden;
+}
+
+.day_birthday_list_item {
+    font-weight: 500;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /*background: #555d7b;*/
+}
+
+.day_birthday_list_item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+form {
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /*grid-template-rows: 2fr 1fr;*/
+    grid-template-rows: 1fr .3fr .3fr;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+.form_field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*border: var(--line-1);*/
+    border-radius: var(--border-radius-5);
+    overflow: hidden;
+}
+
+.form_field label {
+    align-self: self-start;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    padding: 1rem .5rem;
+    background: var(--color-day-bck);
+    color: var(--color-grey-light-1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_field:last-of-type, .error_wrapper {
+    grid-column: 1 / -1;
+}
+
+.submit {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem 3.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--color-body-bck);
+    border-radius: var(--border-radius-4);
+    background: #192a56;
+}
+
+#year_inp {
+
+}
+
+.form_field label.error {
+    background: var(--color-red);
+}
+
+.error_list, .inst_list {
+    padding: 1rem .5rem;
+    border: var(--line-1);
+    border-bottom-left-radius: var(--border-radius-5);
+    border-bottom-right-radius: var(--border-radius-5);
+    justify-self: center;
+}
+
+.error_item, .warning, .inst_item {
+    font-size: 1.3rem;
+    display: block;
+    position: relative;
+    padding: 1rem .5rem 1rem 1.5rem;
+    margin-left: .4rem;
+    margin-bottom: 1.4rem;
+    color: var(--color-red);
+}
+
+.error_item:after, .warning:after, .inst_item:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-red);
+}
+
+.warning {
+    color: var(--color-yellow) !important;
+}
+
+.warning:after {
+    background: var(--color-yellow) !important;
+}
+
+.inst_item {
+    color: var(--color-text) !important;
+}
+
+.inst_item:after {
+    background: var(--color-text) !important;
+}
+
+.hide {
+    display: none !important;
+}

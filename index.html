@@ -1,0 +1,193 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./assets/calendar.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Find Birthday Day</title>
+</head>
+<body>
+<header class="header">
+    <h3 class="heading heading_3">Find Birthday Day</h3>
+</header>
+<main class="main">
+    <form class="form">
+        <div class="form_field">
+            <label for="json_inp" class="label"> <span>Birthday JSON</span><span>MM/DD/YYYY</span></label>
+            <textarea name="list" id="json_inp" cols="30" rows="10">
+[
+    {
+        "name": "Naveen Pantra",
+        "birthday": "05/20/1998"
+    },
+    {
+        "name": "Lalasa Pantra",
+        "birthday": "10/09/1996"
+    },
+    {
+        "name": "Gurappa Pantra",
+        "birthday": "12/09/1969"
+    },
+    {
+        "name": "Vijaya Lakshmi Lekkalapudi",
+        "birthday": "02/10/1975"
+    },
+    {
+        "name": "Praneeth Reddy",
+        "birthday": "11/12/1998"
+    },
+    {
+        "name": "Dharani Kumar",
+        "birthday": "10/20/1997"
+    },
+    {
+        "name": "Ravi Teja",
+        "birthday": "05/06/1997"
+    },
+    {
+        "name": "Sravan",
+        "birthday": "10/09/1998"
+    },
+    {
+        "name": "Naveen Kumar Reddy Ummireddygari",
+        "birthday": "09/23/1998"
+    },
+    {
+        "name": "Durga Venkata",
+        "birthday": "12/01/1996"
+    },
+    {
+        "name": "Yoga Nanda",
+        "birthday": "12/01/1997"
+    },
+    {
+        "name": "Meghana Reddy",
+        "birthday": "04/28/1996"
+    },
+    {
+        "name": "Shravani Kinera",
+        "birthday": "12/07/1993"
+    },
+    {
+        "name": "Mounika Panta",
+        "birthday": "05/19/1994"
+    },
+    {
+        "name": "Surendra Pandra",
+        "birthday": "01/23/1972"
+    },
+    {
+        "name": "Kaushik Pandra",
+        "birthday": "06/02/1995"
+    },
+    {
+        "name": "Rishvik Pandra",
+        "birthday": "12/02/1996"
+    },
+    {
+        "name": "Rajeshwari Naineni",
+        "birthday": "10/10/1973"
+    }
+]
+            </textarea>
+        </div>
+        <div class="form_field">
+            <div class="form_field">
+                <label for="year_inp" class="label">Year</label>
+                <input type="text" name="year" id="year_inp" value="2020">
+            </div>
+            <div class="form_field">
+                <button class="submit">Update</button>
+            </div>
+        </div>
+        <div class="form_field error_wrapper hide">
+            <label class="label error">Errors / Warnings</label>
+            <ul class="error_list">
+            </ul>
+        </div>
+        <div class="form_field">
+            <label class="label">Instructions</label>
+            <ul class="inst_list">
+                <li class="error_item inst_item">Please open in <strong>15.6″ Screen</strong>, <strong>Chrome</strong> for better experience</li>
+                <li class="error_item inst_item">This web page is <strong>not responsive</strong>, please open it in laptop/desktop browsers/screens</li>
+            </ul>
+        </div>
+    </form>
+    <ul class="days_list">
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">SUN</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="0">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">MON</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="1">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">TUE</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="2">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">WED</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="3">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">THU</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="4">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">FRI</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="5">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+        <li class="day_item">
+            <section class="day">
+                <h5 class="heading heading_5">SAT</h5>
+                <ul class="day_birthday_list cal__day day--empty" data-day="6">
+                    <li class="day_birthday_list_item" style="opacity: 0.2; background: var(--color-list-bck)">
+                        <img src="./assets/mustach.png" alt="mustach">
+                    </li>
+                </ul>
+            </section>
+        </li>
+    </ul>
+</main>
+<script type="application/javascript" src="./app.js"></script>
+</body>
+</html>
